@@ -1,0 +1,16 @@
+#title{
+    padding: 15px;
+}
+.nav{
+    background: cornflowerblue;
+    color: cornsilk;
+}
+#search-bar{
+    padding-top: 20px;
+}
+#card-header{
+    padding-bottom: 20px;
+}
+#weather-content{
+    padding-top: 20px;
+}
