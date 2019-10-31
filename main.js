@@ -1,18 +1,26 @@
-$("#find-movie").on("click", function(event) {
+$(document).ready(function(){
+  
+  $(".btn").click(function(response){
+    
+    var city = $("#city").val();
+    var APIKey = "&166a433c57516f51dfab1f7edaed8413";
+    
+    if(city != ""){
+      $.ajax({
+        url: "https://api.openweathermap.org/data/2.5/weather?&" +
+        "q=" + city + "&units=imperial&appid=" + APIKey, 
+        type: "GET",
+        datatype: "jsonp",
+        success: function(data){
+          console.log(data);
+        }
+      });
 
-    event.preventDefault();
-
-    var movie = $("#movie-input").val();
-
-    var queryURL = "https://www.omdbapi.com/?t=" + movie + "&apikey=trilogy";
-
-
-$.ajax({
-    url: queryURL,
-    method: "GET"
-  }).then(function(response) {
-    console.log(response); 
-
-    $("").text(JSON.stringify(response));
+    }else{
+      $("#error").html("You didn't add a city!")
+    }
+    
   });
+  
+  
 });

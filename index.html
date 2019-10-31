@@ -11,6 +11,8 @@
     <!-- Local Stylesheet -->
     <link rel="stylesheet" href="style.css">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <title>Weather Dashboard</title>
   </head>
   <body>
@@ -22,6 +24,7 @@
     <!-- Main Content-->
     <div class="container">
         <div class="row">
+
             <!-- Search Sidebar -->
             <div id="search-bar" class="col-3 bg-light">
                 <div id="previous-searches">
@@ -29,21 +32,21 @@
                 </div>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend" aria-placeholder="Find a city...">
-                        <button class="btn btn-primary fa fa-search" type="button">
-                            <!-- <i class="fa fa-search"></i> -->
+                        <button id="submit-weather" class="btn btn-primary" type="button">
                             </div>
-                            <input type="text" class="form-control" placeholder="Find a City..." aria-label="">
-                        </div>
+                            <input id="city" type="text" class="form-control" placeholder="Find a City..." aria-label="">
                     </div>
-                    <!-- Weather Content -->
+                        <span id="error"></span>
+                    </div>
+            <!-- Weather Content -->
             <div id="weather-content" class="col-9">
                     <div class="card">
                         <div class="card-body">
                             <h4 id="card-header">City Name (The/Date/Here)</h4>
-                                <p>Temperature: </p>
-                                <p>Humidity: </p>
-                                <p>Wind Speed: </p>
-                                <p>UV Index: </p>
+                                <p id="temp">Temperature: </p>
+                                <p id="humidity">Humidity: </p>
+                                <p id="wind">Wind Speed: </p>
+                                <p id="uv-index">UV Index: </p>
                         </div>
                     </div>
             </div>
