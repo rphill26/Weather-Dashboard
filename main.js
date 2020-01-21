@@ -3,9 +3,7 @@ var queryURL = 'api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=52e
 
 const printInfo =(data)=>{
   console.log(data)
-  let  $h4 = $("<h2>").text(data.name)
-  let icon= `<img src="http://openweathermap.org/img/wn/${data.weather[0].icon}.png" alt="weather icon">`
-  $h4.append(icon)
+  let  $h4 = $("<h4>").text(data.name)
   const $temp = $("<div>").text("temperature is at: "+ data.main.temp + "F")
   const $humidity = $("<div>").text("humidty is at: "+ data.main.humidity + "%")
   const $wind = $("<div>").text("the wind speed: " + data.wind.speed + "mph")
@@ -24,7 +22,7 @@ $('#submit-weather').click(function(){
       printInfo(response);
 
     });
-  
+    
 });
 
     
