@@ -11,7 +11,7 @@ const printInfo =(data)=>{
   const $wind = $("<div>").text("the wind speed: " + data.wind.speed + "mph")
   $div.append($h4, $temp, $humidity, $wind)
   
-  $("#mainPanel").append($div)
+  $("#weather-content").append($div)
 
 }
 
